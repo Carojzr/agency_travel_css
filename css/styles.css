@@ -1,0 +1,289 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.main{
+  margin: 0;
+  padding: 0;
+}
+.main-nav {
+  position: fixed; /* Fija la posición del menú */
+  top: 0; /* Ancla el menú en la parte superior */
+  left: 0; /* Ancla el menú en la parte izquierda */
+  width: 90%; /* Ocupa todo el ancho de la ventana */
+  /*background-color: #ffffff; /* Fondo del menú */
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  display: flex;
+  /*border-radius: 3px;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aquí definimos la sombra */
+  margin-left: 100px; /* Ancho de la barra lateral */
+  padding: 20px;
+}
+  .main-nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    flex: 3;
+  }
+  .main-nav li {
+    margin-right: 1em;
+  }
+ 
+  .main-nav a {
+    text-decoration: none;
+    color:#E76161; /* Hereda el color del contenedor */
+    font-size: 18px;
+    font-weight: 700; /* Ajusta el tamaño de la letra según sea necesario */
+  }
+  
+  .main-nav a:hover {
+    color: #F99B7D; /* Cambia el color al pasar el mouse sobre el enlace */
+  }
+
+  /* Agregar bordes o sombras al enlace */
+  .main-nav a:hover {
+    border-bottom: 3px solid #E76161;
+  }
+  
+  /* Estilos para la barra lateral */
+  .sidebar{
+    position: fixed;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    top: 0;
+    left: 0;
+    width: 200px; /* Ancho de la barra lateral */
+    height: 100%; /* Altura de la barra lateral */
+    margin-top: 10px; /* Agrega un margen superior para desplazar los elementos hacia abajo */
+    color: white;
+  }
+
+  .sidebar a{
+    text-decoration: none;
+    color:#0158a6; /* Hereda el color del contenedor */
+    font-size: 18px; /* Ajusta el tamaño de la letra según sea necesario */
+  }
+  
+  .sidebar a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse sobre el enlace */
+  }
+  main {
+    margin-left: 200px; /* Ancho de la barra lateral */
+    margin-top: 50px; /* Altura de la barra de navegación */
+    padding: 20px;
+  }
+  /* Estilos para el título principal */
+.title {
+  margin-top: 40px; /* Ajusta según la altura de tu barra de navegación */
+  margin-bottom: 50px;
+  flex-grow: 1; /* El título tomará el espacio disponible */
+  border-bottom: 1px solid #2ea1d8; /* Línea con borde inferior de 1px sólido y color azul */
+  font-size: 32px;
+}
+.titleP{
+  margin-top: 70px; /* Ajusta según la altura de tu barra de navegación */
+  margin-bottom: 50px;
+  flex-grow: 1; /* El título tomará el espacio disponible */
+  border-bottom: 1px solid #2ea1d8; /* Línea con borde inferior de 1px sólido y color azul */
+  font-size: 32px;
+}
+.seccion {
+  margin-bottom: 80px; /* Espacio entre las secciones */
+}
+
+.container{
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 250px;
+  grid-gap: 20px;
+  padding: 25px 0;
+  position: relative; /* Asegura que los elementos absolutamente posicionados dentro de .container sean relativos a este contenedor */
+}
+
+.box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box:hover img {
+  transform: scale(1.04); /* Escala la imagen al 110% de su tamaño original al pasar el cursor sobre la caja */
+  box-shadow: 0 0 15px rgba(178, 33, 214, 0.622); /* Agrega una sombra suave al pasar el cursor sobre la imagen */
+}
+
+.box:nth-child(1){
+  grid-column-start: span 2;
+}
+
+.box:nth-child(4){
+  grid-column-start: span 2;
+  
+}
+.seccion-titulo{
+  color: #FF6D60;
+  font-size: 22px;
+}
+
+p{
+  font-family: sans-serif;
+  font-size: 18px;
+}
+.acerca{
+  text-align: justify;
+}
+.container1{
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 250px;
+  grid-gap: 10px;
+  padding: 25px 0;
+  position: relative; /* Asegura que los elementos absolutamente posicionados dentro de .container sean relativos a este contenedor */
+}
+.box1 {
+  position: relative;
+  overflow: hidden; /* Oculta el contenido que se desborda */
+  box-shadow: 0px 0px 5px #ff5900;
+}
+.box1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.box1:hover img {
+  transform: scale(1.04); /* Escala la imagen al 110% de su tamaño original al pasar el cursor sobre la caja */
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+  color: white;
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease; /* Agrega una transición suave */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.overlay h3{
+  font-size: 24px;
+}
+.overlay p{
+  font-size: 15px;
+}
+.box1:hover .overlay {
+  opacity: 1; /* Hacer visible al pasar el ratón */
+}
+
+.box1:nth-child(1){
+  grid-column-start: span 2;
+}
+
+.box1:nth-child(3){
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+.box1:nth-child(4){
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+.box1:nth-child(5){
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+}
+.box1:nth-child(6){
+  grid-column-start: span 2;
+}
+.header h2{
+  font-size: 28px;
+}
+.header h3{
+  color : #FF6D60;
+  font-size: 24px;
+}
+.header-section{
+  margin-bottom: 80px;
+}
+.itinerario-dia p{
+  display: none;
+}
+.itinerario-dia h3:hover + p{
+  display:block;
+}
+.itinerario-dia h3{
+  font-size: 24px;
+}
+
+.itinerario-dia h3 p{
+  display: inline;
+  color:#0158a6;
+  font-size: 24px;
+}
+
+.container-costos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Definimos tres columnas iguales */
+  /*grid-template-rows: repeat(2, 1fr); /* Definimos cuatro filas iguales */
+  gap: 10px; /* Espacio entre las tarjetas */
+  margin-right: 230px;
+  margin-left: 150px;
+}
+
+.card {
+  /*width: 390px;
+  height: 200px;*/
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  border: 1px solid black;
+  position: relative; 
+}
+.card h2{
+  color : #FF6D60
+} 
+.card p{
+  font-size: 15px;
+}
+.card-traslados {
+  grid-column: 1; 
+  border-left: 2px solid #007bff; 
+}
+
+.card-hos {
+  grid-column: 2;
+  border-left: 2px solid #007bff;
+}
+
+.card-entrada {
+  grid-column: 3; 
+  border-left: 2px solid #007bff;
+}
+
+.boton {
+  position: fixed; /* Establecer la posición fija */
+  bottom: 0; /* Alinear la parte inferior del contenedor con la parte inferior de la ventana */
+  right: 0; /* Alinear la parte derecha del contenedor con la parte derecha de la ventana */
+}
+
+.boton:hover img {
+  opacity: 0.7; /* Opacidad reducida para dar retroalimentación visual */
+}
+.traslados h2{
+  color : #FF6D60
+}
+.traslados p{
+  text-align: justify;
+}
+
+.traslados li{
+  font-size: 18px;
+  font-family: sans-serif;
+  text-align: justify;
+}
